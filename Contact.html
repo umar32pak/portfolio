@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact</title>
+<link rel="stylesheet" type="text/css" href="File-contact.css" />
+<script>
+function u()
+{
+
+x=document.forms["cform"]["name"].value;
+if(x=="")
+{
+alert("Please enter your name")
+return false;
+}
+
+x=document.forms["cform"]["e-mail"].value;
+if(x=="")
+{
+alert("Please enter your Email")
+return false;
+}
+x=document.forms["cform"]["contact"].value;
+if(x=="")
+{
+alert("Please enter Contact No")
+return false;
+}
+
+x=document.forms["cform"]["message"].value;
+if(x=="")
+{
+alert("Please type your message")
+return false;
+}
+}
+</script>
+</head>
+<body>
+<div id="togglearea">
+<label for="toggle">
+<span></span>
+<span></span>
+<span></span>
+</label>
+</div>
+<input type="checkbox" id="toggle">
+<div class="nav">
+<a href="index.html" >Home</a>
+<a href="About.html">About</a>
+<a href="Skills.html">Skills</a>
+<a href="Projects.html">Projects</a>
+<a href="Contact.html" id="active">Contact</a>
+</div>
+<div class="text">
+<h1>Contact Me</h1>
+</div>
+<div id="log">
+<table id="table">
+<form name="cform" action="Record.php" method="post" enctype="multipart/form-data" >
+<tr>
+<td style="text-align:left;">Name:&nbsp;&nbsp;&nbsp;</td>
+<td><input type="text" name="name" style="border:1px solid white; font-size:18px; background:none; color:white;"></td>
+</tr>
+
+<tr>
+<td style="text-align:left;">Email:&nbsp;&nbsp;&nbsp;</td>
+<td><input type="email" name="e-mail" style="border:1px solid white; font-size:18px; background:none; color:white;"></td>
+</tr>
+
+<tr>
+<td style="text-align:left;">Contact:&nbsp;&nbsp;&nbsp;</td>
+<td><input type="text" name="contact" style="border:1px solid white; font-size:18px; background:none; color:white;"></td>
+</tr>
+
+<tr>
+<td style="text-align:left;">Gender:&nbsp;&nbsp;&nbsp;</td>
+<td><input radio type="radio" name="gender" value="male" checked="checked" style=" font-size:18px;; color:white;">&nbsp;Male&nbsp;&nbsp;
+<input radio type="radio" name="gender" value="female"Female style=" font-size:18px;  color:white;">&nbsp;Female
+</td>
+</tr>
+
+<tr>
+<td style="text-align:left;">Message:&nbsp;&nbsp;&nbsp;</td>
+<td><textarea  cols="21" rows="6" name="message" style="border:1px solid white; font-size:18px; background:none; color:white;"></textarea></td>
+</tr>
+
+<tr>
+<td colspan="2" style="text-align:right;"><input type="submit" onclick="return(u())" style="font-size:18px; cursor:pointer; margin:10px; background:none; color:#FFF; width:100px; height:30px; box-shadow:5px 5px 2px black; border:1px solid white;"></td>
+</tr>
+</form>
+</table>
+</div>
+</div>
+</body>
+</html>
